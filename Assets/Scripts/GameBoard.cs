@@ -37,6 +37,12 @@ public class GameBoard : MonoBehaviour
         UpdateScore();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
+    }
+
     private void Reset()
     {
         SceneManager.LoadScene(Scene.ToonBlast.ToString());
